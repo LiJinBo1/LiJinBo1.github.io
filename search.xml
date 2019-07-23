@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F07%2F23%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[个人Hexo博客创建记录]]></title>
+    <url>%2F2019%2F07%2F19%2Fhexo-create%2F</url>
+    <content type="text"><![CDATA[博客搭建步骤： 安装Hexo环境：安装git、安装node.js环境、安装Hexo、创建Github Pages、创建gitee仓库 基本Hexo创建博客：新建Hexo项目、关联到gitee仓库、安装hexo-admin插件、发布Hexo至Github Pages、写一篇新文章 Hexo博客搭建记录搭建Hexo环境安装git 到官方网站下载git客户端：https://git-scm.com/download 安装完成后，运行命令git --version，查看是否成功安装git 安装node.js环境 使用nvm安装node.js(nvm是用来管理node.js版本的，通过它可以下载安装任意版本nodejs并实现任意切换) 安装nvm命令：curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash 安装完成后，运行命令nvm -v，查看是否成功安装nvm nvm常用命令： nvm ls-remote：列出全部可以安装的版本号 nvm install：安装最新版本nvm nvm install 版本号：安装指定版本 nvm install stable： 安装最新稳定版 nvm uninstall 版本号：卸载指定版本 nvm use 版本号：切换指定版本，切换效果是全局的 nvm current：查看当前使用的版本 nvm ls：查看该系统已经安装的版本，这个命令也能看到当前使用的是哪个版本 安装node.js命令：nvm install stable 安装完成后，运行命令node -v和npm -v，查看是否成功安装node.js环境 安装Hexo： 安装Hexo命令：npm install -g hexo-cli 创建Github Pages(如无github帐号请先自行注册帐号) Github Pages用于发布网站 在github新创建一个仓库：仓库的名字必须是 github登录name.github.io(每一个github账户最多只能创建一个这样可以直接使用域名访问的仓库) 创建gitee仓库(如无gitee帐号请先自行注册帐号) gitee仓库用于管理hexo创建的博客源码 在gitee新创建一个仓库本地创建Hexo博客项目新建Hexo项目 创建Hexo博客：hexo init &lt;folder&gt; 进入博客文件目录：cd &lt;folder&gt; 安装Hexo博客：npm install 至此，最基本的Hexo已经完成，运行命令hexo s，访问localhost:4000 即可看到初始模板博客 关联到gitee仓库，方便对Hexo博客源码进行管理 进入博客文件目录：cd &lt;folder&gt; 初始化git仓库：git init 提交文件：git add . 提交文件：commit -m &quot;init Hexo&quot; 关联远程仓库：git remote add origin &lt;gitee仓库ssh地址&gt; 本地分支与远程仓库分支关联：git branch --set-upstream-to=origin/master master 提交文件到远程仓库：git push(第一次提交使用git push -u origin master) 至此Hexo源码已经完成通过gitee仓库管理 安装hexo-admin插件 hexo-admin是Hexo的后台管理页面插件，可以方便发布管理文章 安装hexo-admin插件命令：npm install --save hexo-admin 配置hexo-admin： 修改_config.yml，在文件最后添加以下内容 admin: username: XXXX(自己设置用户名) password_hash: XXXXXXXXX(密码，但是是明文经过bcrypt hash加密后生成的) secret: hey hexo(用于cookie安全) 至此，hexo-admin已经安装完成，运行命令hexo s，访问localhost:4000/admin 登录后即可看到后台管理页面 发布Hexo至Github Pages 安装hexo-deployer-git插件命令：npm install hexo-deployer-git --save 配置发布： 修改_config.yml，找到deploy并修改 # Deployment ## Docs: https://hexo.io/docs/deployment.html deploy: type: git repo: github仓库ssh地址 branch: master 生成静态页面命令：hexo generate 部署到GitHub命令：hexo deploy 至此，一个Hexo博客从零搭建到发布已经完成，在浏览器访问github登录name.github.io，即可看到发布的博客 写一篇新文章 创建新文章命令：hexo new &lt;title&gt; 进入新建文件，按MarkDown文件要求编辑文件，再按使用命令hexo deloy发布即可Hexo常用命令常见命令 hexo new [layout] &lt;title&gt; #新建文章 默认为post，可以通过修改_config.yml中的default_layout参数来指定默认布局。 hexo new &lt;title&gt; #新建文章 hexo new page &quot;pageName&quot; #新建页面 hexo generate #生成静态页面至public目录 hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server） hexo deploy #部署到GitHub hexo help # 查看帮助 hexo version #查看Hexo的版本 hexo clean #清理缓存文件 缩写： hexo n == hexo new hexo g == hexo generate hexo s == hexo server hexo d == hexo deploy 组合命令： hexo s -g #生成并本地预览 hexo d -g #生成并上传]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+</search>
